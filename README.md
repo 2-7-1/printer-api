@@ -2,6 +2,8 @@
 An API demonstrating management of 3D printed parts and sending them to be printed.
 
 # Usage
+The available API endpoints are:
+
 GET /part
     
     -- List all parts in collection
@@ -32,13 +34,15 @@ POST /printer
 
 To see a formal specification/documentation of this API, open https://github.com/2-7-1/printer-api/blob/master/api/swagger/swagger.yaml in Swagger editor (https://editor.swagger.io).
 
+Unit test are runnable with mocha: https://github.com/2-7-1/printer-api/tree/master/test/api/controllers 
+
 # Supported User Stories
 In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstrates managing a collection of
-3D printed parts and print jobs that supports the following user stories:
+3D printed parts and print jobs.  It supports the following user stories:
 
---As a user, I want to manage (List/Add/Update/Delete) my parts with properties - Material Type, Printer Type, Orientation Angle, Density Percentage
+-- As a user, I want to manage (List/Add/Update/Delete) my parts with properties - Material Type, Printer Type, Orientation Angle, Density Percentage
 
---As a user, I want to send command to print my part by id or name
+-- As a user, I want to send command to print my part by id or name
 
 -- As a user, I want to view my printer job queue for parts with status (Ready, In-Progress, Complete)
 
