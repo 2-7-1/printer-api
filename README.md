@@ -46,7 +46,7 @@ In Minimum Viable Product (MVP) is for an API that demonstrates managing a colle
 
 -- As a user, I want to view my printer job queue for parts with status (Ready, In-Progress, Complete)
 
-This API has been tested against a local Node developer environment as a NodeJD microservice using Express with Swagger middleware.
+This API has been tested against a local Node developer environment running as a NodeJS microservice using Express with Swagger middleware.
 
 The parts collection and printer queue are simulated in an in-memory array.
 
