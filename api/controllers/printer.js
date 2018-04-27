@@ -12,7 +12,7 @@ setInterval(function () {
         completed.push(finishedJob);
         printerQueue = printerQueue.pop();
         if (printerQueue.length > 0) {
-            printerQueue[printerQueue.length - 1] = 'inProgress';
+            printerQueue[printerQueue.length - 1].status = 'inProgress';
         }
     }
 }, 30000);
