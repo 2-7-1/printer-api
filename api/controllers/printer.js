@@ -15,7 +15,7 @@ setInterval(function () {
             printerQueue[printerQueue.length - 1] = 'inProgress';
         }
     }
-}, 10000);
+}, 30000);
 
 module.exports = {
     getPrinterQueue,
