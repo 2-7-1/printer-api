@@ -30,7 +30,7 @@ GET /printer
 
 POST /printer
 
-    -- Add part to printer queue
+    -- Add part id to printer queue
 
 To see a formal specification/documentation of this API, open https://github.com/2-7-1/printer-api/blob/master/api/swagger/swagger.yaml in Swagger editor (https://editor.swagger.io).
 
