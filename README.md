@@ -47,12 +47,12 @@ The parts collection and printer queue are simulated in an in-memory array.
 The printer has logic that de-queues a part from the end of its printer queue in a FIFO fashon every 30 seconds to simulate that the printer completes a print job every 30 seconds.  It also changes the statuses of the jobs in the print queue accordingly between "ready", "inProgress", and "Complete".
 
 # Further Refactoring
-After this MVP, further refactoring should include:
+After this MVP, improvements and refactorings in future sprints should include:
 
 -- Replacing in-memory arrays with live databases (perhaps AWS RDS)
 
 -- More unit tests and error handling to cover more failure modes
 
--- Security
+-- Security (Validation/Authentication)
 
 -- Docker container deployment on AWS ECS
