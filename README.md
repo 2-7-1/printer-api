@@ -34,7 +34,7 @@ POST /printer
 
 To see a formal specification/documentation of this API, open https://github.com/2-7-1/printer-api/blob/master/api/swagger/swagger.yaml in Swagger editor (https://editor.swagger.io).
 
-Unit test are runnable with mocha: https://github.com/2-7-1/printer-api/tree/master/test/api/controllers 
+Unit tests are runnable with mocha: https://github.com/2-7-1/printer-api/tree/master/test/api/controllers 
 
 # Supported User Stories
 In Minimum Viable Product (MVP) is for an API that demonstrates managing a collection of
