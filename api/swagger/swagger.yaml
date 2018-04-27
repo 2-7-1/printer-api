@@ -1,0 +1,196 @@
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: printer-api
+host: 'localhost:10010'
+basePath: /
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /part:
+    x-swagger-router-controller: part
+    get:
+      description: get list of parts
+      operationId: getParts
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/Parts'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    post:
+      description: add a new part to list
+      operationId: postPart
+      parameters:
+        - name: part
+          description: Part properties
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Part'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GeneralResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    put:
+      description: update a part
+      operationId: putPart
+      parameters:
+        - name: part
+          description: part
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Part'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GeneralResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+  /part/{id}:
+    x-swagger-router-controller: part
+    get:
+      description: get a part
+      operationId: getPart
+      parameters:
+        - name: id
+          type: string
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/Part'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    delete:
+      description: delete a part
+      operationId: deletePart
+      parameters:
+        - name: id
+          description: Movie id
+          type: string
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GeneralResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+  /printer:
+    x-swagger-router-controller: printer
+    get:
+      description: get a printer queue
+      operationId: getPrinterQueue
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/PrinterQueue'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    post:
+      description: send a job to the printer queue
+      operationId: postPrinterQueue
+      parameters:
+        - name: id
+          schema:
+            type: object
+          in: body
+          required: true
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GeneralResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+definitions:
+  Parts:
+    required:
+      - parts
+    properties:
+      parts:
+        type: array
+        items:
+          $ref: '#/definitions/Part'
+  Part:
+    required:
+      - id
+      - materialType
+      - printerType
+      - orientationAngle
+      - densityPercentage
+    properties:
+      id:
+        type: string
+      materialType:
+        type: string
+        description: 'composite, metal, etc.'
+      printerType:
+        type: string
+        description: printer model
+      orientationAngle:
+        type: number
+        description: orientation angle
+      densityPercentage:
+        type: number
+        description: density percentage
+  PrinterQueue:
+    properties:
+      id:
+        type: string
+        description: id
+      status:
+        type: string
+        enum:
+          - ready
+          - inProgress
+          - complete
+    required:
+      - id
+      - status
+  GeneralResponse:
+    type: object
+    properties:
+      success:
+        type: number
+        description: returns 1 if successful
+      message:
+        type: string
+        description: a short comment
+    required:
+      - success
+      - message
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

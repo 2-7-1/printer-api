@@ -1,1 +1,1 @@
-# printer-api
+# Skeleton project for Swagger
