@@ -30,7 +30,7 @@ POST /printer
 
     -- Add part to printer queue
 
-Run https://github.com/2-7-1/printer-api/blob/master/api/swagger/swagger.yaml in Swagger editor (https://editor.swagger.io) for full OpenAPI swagger.yamp specification.
+To get a formal-looking specification of this API, run https://github.com/2-7-1/printer-api/blob/master/api/swagger/swagger.yaml in Swagger editor (https://editor.swagger.io).
 
 # Supported User Stories
 In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstrates managing a collection of
