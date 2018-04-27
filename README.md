@@ -37,7 +37,7 @@ To see a formal specification/documentation of this API, open https://github.com
 Unit test are runnable with mocha: https://github.com/2-7-1/printer-api/tree/master/test/api/controllers 
 
 # Supported User Stories
-In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstrates managing a collection of
+In Minimum Viable Product (MVP) is for an API that demonstrates managing a collection of
 3D printed parts and print jobs.  It supports the following user stories:
 
 -- As a user, I want to manage (List/Add/Update/Delete) my parts with properties - Material Type, Printer Type, Orientation Angle, Density Percentage
@@ -45,6 +45,8 @@ In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstra
 -- As a user, I want to send command to print my part by id or name
 
 -- As a user, I want to view my printer job queue for parts with status (Ready, In-Progress, Complete)
+
+This API has been tested against a local Node developer environment as a NodeJD microservice using Express with Swagger middleware.
 
 The parts collection and printer queue are simulated in an in-memory array.
 
