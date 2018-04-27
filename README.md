@@ -50,6 +50,9 @@ The printer has logic that de-queues a part from the end of its printer queue in
 After this MVP, further refactoring should include:
 
 -- Replacing in-memory arrays with live databases (perhaps AWS RDS)
+
 -- More unit tests and error handling to cover more failure modes
+
 -- Security
+
 -- Docker container deployment on AWS ECS
