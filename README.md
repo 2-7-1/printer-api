@@ -1,5 +1,5 @@
 # printer-api
-An API demonstrating management of 3D printed parts and sending them to be printed.
+An API demonstrating management of a collection of 3D printed parts and queueing parts for printing.
 
 # Usage
 The available API endpoints are:
