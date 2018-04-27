@@ -37,7 +37,7 @@ To see a formal specification/documentation of this API, open https://github.com
 Unit tests are runnable with mocha: https://github.com/2-7-1/printer-api/tree/master/test/api/controllers 
 
 # Supported User Stories
-This Minimum Viable Product (MVP) is for an API that demonstrates managing a collection of
+This Minimum Viable Product (MVP) is a microservice API that demonstrates managing a collection of
 3D printed parts and print jobs.  It supports the following user stories:
 
 -- As a user, I want to manage (List/Add/Update/Delete) my parts with properties - Material Type, Printer Type, Orientation Angle, Density Percentage
