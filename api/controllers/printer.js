@@ -4,7 +4,7 @@
 var printerQueue = [];
 var completed = [];
 
-// Simulate print job finishing every minute
+// Simulate print job finishing every 30 seconds
 setInterval(function () {
     if (printerQueue.length > 0) {
         var finishedJob = printerQueue[printerQueue.length - 1];
