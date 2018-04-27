@@ -48,7 +48,7 @@ In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstra
 
 The parts collection and printer queue are simulated in an in-memory array.
 
-The printer has logic that de-queues a part from the end of its printer queue in a FIFO fashon every 30 seconds to simulate that the printer completes a print job every 30 seconds.  It also changes the statuses of the jobs in the print queue accordingly between "ready", "inProgress", and "Complete".
+The printer has logic that de-queues a part from the end of its printer queue in a FIFO fashon every 30 seconds to simulate that the printer completes a print job every 30 seconds.  It also changes the statuses of the jobs in the print queue accordingly between "ready", "inProgress", and "Complete".  See https://github.com/2-7-1/printer-api/blob/master/api/controllers/printer.js 
 
 # Further Refactoring
 After this MVP, improvements and refactorings in future sprints should include:
