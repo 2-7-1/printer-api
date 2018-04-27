@@ -43,4 +43,4 @@ In Agile terms, this is a Minimum Viable Product (MVP) for an API that demonstra
 -- As a user, I want to view my printer job queue for parts with status (Ready, In-Progress, Complete)
 
 
-The /printer endpoints have logic that de-queues a part from the end of its printer queue in a FIFO fashon every 30 seconds to simulate that the printer completes a print job from the end of its queue every 30 seconds, and changes the statuses of the jobs in the print queue accordingly between "ready", "inProgress", and "Complete".  
+The printer has logic that de-queues a part from the end of its printer queue in a FIFO fashon every 30 seconds to simulate that the printer completes a print job every 30 seconds.  It also changes the statuses of the jobs in the print queue accordingly between "ready", "inProgress", and "Complete".  
