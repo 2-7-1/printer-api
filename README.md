@@ -61,4 +61,6 @@ After this MVP, improvements and refactorings in future sprints should include:
 
 -- Security (Validation/Authentication)
 
+-- Logging
+
 -- Deploying/Running in Docker container on AWS ECS
